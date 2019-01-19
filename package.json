@@ -1,0 +1,16 @@
+{
+  "name": "systemd-webhook",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Ryan Gonzalez",
+  "license": "MPL-2.0",
+  "private": true,
+  "dependencies": {
+    "@octokit/webhooks": "^5.1.2",
+    "mailgun-js": "^0.22.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "eventsource": "^1.0.7"
+  }
+}
