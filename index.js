@@ -58,19 +58,23 @@ async function handleWebhook({id, name, payload}) {
 
   if (prerelease) {
     message.subject = `systemd prerelease ${unprefixed}`
-    message.text = 'A new systemd ☠️ pre-release☠️  has just been tagged.'
+    message.text = 'A new systemd ☠️ pre-release ☠️ has just been tagged.'
   } else {
     message.subject = `systemd ${unprefixed} released`
     message.text = '🎆 A new, official systemd release has just 🎉 been 🎊 tagged 🍾.'
   }
 
-  message.text += ` Please download the tarball here:\n\n  ${tarballUrl}\n\n`
+  message.text += ` Please download the tarball here:
+
+        ${tarballUrl}
+
+`
 
   if (prerelease) {
     message.text += `NOTE: This is ☠️ pre-release☠️ software. Do not run this on \
 production systems, but please test this and report any issues you find to GitHub:
 
-  https://github.com/systemd/systemd/issues/new?template=Bug_report.md
+        https://github.com/systemd/systemd/issues/new?template=Bug_report.md
 
 `
   }
