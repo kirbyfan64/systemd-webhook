@@ -32,7 +32,7 @@ async function handleWebhook({id, name, payload}) {
     return
   }
 
-  let match = payload.ref.match(/^v([0-9]+)(-pre.*)?$/)
+  let match = payload.ref.match(/^v([0-9]+)(-rc.*)?$/)
   if (!match) {
     return
   }
