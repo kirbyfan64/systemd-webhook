@@ -34,6 +34,7 @@ async function handleWebhook({id, name, payload}) {
 
   let match = payload.ref.match(/^v([0-9]+)(-rc.*)?$/)
   if (!match) {
+    console.log(`Ignoring unknown tag ${payload.ref}`)
     return
   }
 
